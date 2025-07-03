@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        ul>li {
+            cursor: pointer;
+        }
+
+        .btn-signin,
+        .btn-signup {
+            border: none;
+            padding: 15px 25px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 1s ease;
+        }
+
+        .btn-signin {
+            background-color: black;
+            color: white;
+        }
+
+        .btn-signin:hover {
+            background-color: white;
+            color: black;
+            transform: skew(15deg);
+        }
+
+        .btn-signup:hover {
+            background-color: black;
+            color: white;
+            /* transform: scale(1.1); */
+            transform: translate(50px);
+        }
+    </style>
+</head>
+
+<body>
+    <div
+        style="height: 100px; background-color: orange; display: flex; justify-content: space-between; align-items: center; padding-inline: 30px ;">
+        <div><img src="../assets/download.jpeg" alt="" style="width: 80px; height: 80px; border-radius: 50%;"></div>
+        <ul style="display: flex; list-style: none; gap: 30px; font-size: 25px;">
+            <li>Home</li>
+            <li>Products</li>
+            <li>Categories</li>
+            <li>AboutUs</li>
+        </ul>
+        <div>
+            <button class="btn-signin">Sign-in</button>
+            <button class="btn-signup">Sign-up</button>
+        </div>
+    </div>
+</body>
+
+</html>
