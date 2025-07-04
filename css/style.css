@@ -116,3 +116,15 @@
     width: 100px;
     flex-grow: 1;
 }
+
+
+/* Grid Properties */
+
+.grid-parent {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    background-color: aqua;
+    height: 700px;
+    /* align-content: end; */
+    /* justify-content: center; */
+}
