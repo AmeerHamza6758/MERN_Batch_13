@@ -34,8 +34,8 @@
     /* border-bottom: 10px solid green; */
     /* margin-bottom: 80px; */
     /* margin: 10px 80px 50px 0px; */
-    padding: 30px 10px 70px 10px;
-    margin: 20px;
+    /* padding: 30px 10px 70px 10px; */
+    /* margin: 20px; */
 }
 
 
@@ -50,18 +50,18 @@
 }
 
 /* %, em, rem, vh, vw */
-.box {
+/* .box {
     background-color: aqua;
-    /* width: 800px; */
+    width: 800px;
     max-width: 800px;
     min-width: 500px;
-    /* width: 800px; */
+    width: 800px;
     padding: 30px;
 
     height: 80px;
     overflow: scroll;
 
-}
+} */
 
 .box-2x {
     width: 200px;
@@ -85,7 +85,7 @@
 /* Flex */
 .parent-box {
     /* background-color: black; */
-    width: 100%;
+    /* width: 100%; */
     height: 300px;
     display: flex;
     justify-content: space-between;
@@ -135,12 +135,12 @@ absolute
 fixed
 sticky */
 
-.desc-postion {
+/* .desc-postion {
     position: relative;
     height: 400px;
     width: 700px;
     background-color: black;
-}
+} */
 
 .desc-child {
     position: absolute;
@@ -165,3 +165,84 @@ sticky */
     display: block;
     clear: both;
 }
+
+* {
+    margin: 0px;
+}
+
+.media-box {
+    height: 100vh;
+    background-color: orange;
+    font-size: 40px;
+    font-weight: 800;
+    font-style: italic;
+}
+
+
+/* @media mediaType screen {
+  selectors
+} */
+
+/* Mobile Devices */
+@media screen and (max-width:480px) {
+    .media-box {
+        background-color: black;
+        color: white;
+        font-size: 15px;
+        font-weight: 600;
+    }
+}
+
+@media (min-width:481px) and (max-width:768px) {
+    .media-box {
+        background-color: green;
+        color: white;
+        font-size: 25px;
+        font-weight: 600;
+        font-style: normal;
+    }
+}
+
+.anima-p {
+    height: 500px;
+    border-bottom: 50px solid black;
+    margin-bottom: 20px;
+}
+
+.anima-box {
+    height: 200px;
+    width: 200px;
+    animation: color-changer 2s ease-in-out infinite alternate-reverse;
+    background-color: black;
+    border-radius: 50%;
+}
+
+@keyframes color-changer {
+    /* from {
+        background-color: red;
+    }
+    to {
+        background-color: yellowgreen;
+    } */
+
+    0% {
+        transform: translate(0px, 301px);
+        background-color: aqua;
+    }
+
+    100% {
+        transform: translate(0px, 0px);
+        background-color: red;
+    }
+}
+
+
+
+
+
+/* animation-name: The name of the keyframes or name of the animation.
+animation-duration: How long the animation takes total time animation will work.
+animation-timing-function: easing function(linear, ease-in, ease-out, ease-in-out, cuberz).
+animation-delay: Wait time before starting.
+animation-iteration-count: Number of times to repeat (infinite is valid).
+animation-direction: normal, reverse, alternate */
