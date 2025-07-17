@@ -119,3 +119,42 @@ console.log(response, 'response');
 const bismanIntelligent = true;
 console.log(typeof bismanIntelligent);
 bismanIntelligent ? console.log('Bisman Is very Intelligent') : console.log('Bad boy');
+
+
+
+// Conditional Statements
+
+// if if-else if-elseif-else switch
+
+const canndy1 = 20;
+const candy2 = 20;
+
+
+if (canndy1 > candy2) {
+    // True
+    console.log('Candy1 Price is greater than Candy2');
+}
+else {
+    // False
+    console.log('Candy2 price is greater');
+}
+
+const num1 = 20
+const num2 = 30
+const num3 = 50
+
+if (num1 > num2 && num1 > num3) {
+    console.log('Num1 is greater');
+}
+else if (num2 > num1 && num2 > num3) {
+    console.log("Num2 is greater")
+}
+else if (num3 > num1 && num3 > num2) {
+    console.log('Num3 is greater');
+}
+else {
+    console.log('Input is not valid');
+}
+
+
+console.log('Kuch ni hoga');
