@@ -156,5 +156,135 @@ else {
     console.log('Input is not valid');
 }
 
+// Switch
 
-console.log('Kuch ni hoga');
+// switch (expression) {
+//     case expression:
+//         console.log('object');
+//         break;
+
+//     default:
+//         console.log('object');
+// }
+
+const numOfDay = new Date().getDay()
+switch (numOfDay) {
+    case 1:
+        console.log('Today is Monday');
+        break;
+    case 2:
+        console.log('Today is Tuesday');
+        break;
+    case 3:
+        console.log('Today is Wednesday');
+        break;
+    case 4:
+        console.log("Today is Thrusday");
+        break;
+    case 5:
+        console.log('Today is Friday');
+        break;
+    case 6:
+        console.log('Today is Saturday');
+        break;
+    case 7:
+        console.log('Today is Sunday');
+        break;
+    default:
+        console.log('Kuch nai ha');
+}
+
+
+
+
+//Loops in JS
+
+for (let start = 1; start <= 10; start++) {
+    // console.log(`5 * ${start} = ${start * 5}`);
+    // console.log('5 *', start, "=", start * 5);
+    // console.log('----');
+}
+// while(condition){}
+let start = 1
+while (start <= 10) {
+    console.log(`10 * ${start} = ${start * 10}`);
+    // console.log('While Loop hu');
+    start++
+}
+console.log(start, 'Start Value');
+//do-while
+do {
+    // console.log(`I am CALLED : ${start}`);
+    start++
+    // console.log('start', start);
+} while (start == 10)
+console.log('object');
+
+
+// For-of loop (Array, string)  Values
+let studentArray = ["Hamza", "Asim", "Ali", "Samina", "Yasmeen"]
+for (let stud of studentArray) {
+    // console.log(`The name of Student is ${stud}`)
+}
+
+const myNamee = "Ameer Hamza"
+for (const xname of myNamee) {
+    // console.log(xname);
+}
+
+// For in-loop ===keys
+const teacher = {
+    name: "Ameer",
+    email: "ameer@yopmail.co",
+    contact: 9876543,
+}
+
+for (let key in teacher) {
+    // console.log(teacher[key]);
+}
+
+// 
+for (let i = 0; i <= studentArray.length - 1; i++) {
+    // console.log('object', studentArray[i]);
+}
+
+console.log('Function Start');
+// Functions in JS
+function addPrices() {
+    const a = 10
+    const b = 20
+    console.log(a + b);
+}
+
+function multiplyVal() {
+    const ab = 200;
+    const cd = 300;
+    let total = ab * cd
+    let sum = ab + cd;
+    // console.log(total);
+    // return ab*cd;
+    return { total };
+}
+const funcVar = multiplyVal()
+
+if (funcVar.total) {
+    console.log('Status Multi True');
+}
+if (funcVar.sum) {
+    console.log('Sum  hai');
+} else {
+    console.log('sum nai ha');
+}
+multiplyVal()
+console.log('Function End');
+
+
+// Function parameters
+function totalMarks(name, obtMarks, grade="A") {
+    console.log(`${name} your obtained marks is: ${obtMarks} and your grade is: ${grade}`);
+}
+
+totalMarks("Meer", 70, "C")  
+
+totalMarks("Maham", 90, "B")
+totalMarks("Latif", 50)
