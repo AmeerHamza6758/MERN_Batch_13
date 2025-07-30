@@ -280,11 +280,42 @@ console.log('Function End');
 
 
 // Function parameters
-function totalMarks(name, obtMarks, grade="A") {
+function totalMarks(name, obtMarks, grade = "A") {
     console.log(`${name} your obtained marks is: ${obtMarks} and your grade is: ${grade}`);
 }
 
-totalMarks("Meer", 70, "C")  
+totalMarks("Meer", 70)
 
 totalMarks("Maham", 90, "B")
 totalMarks("Latif", 50)
+
+
+// Funtion
+let funcExp = function () {
+    console.log('Function Expression syntax');
+}
+
+// Arrow Funtion
+
+// let funcAnnony = () => {
+//     console.log('Arrow Function');
+// }
+
+// Arrow function
+
+let additionValues = (val1, val2) => {
+    let sum = val1 + val2
+    return sum
+}
+console.log(additionValues(20, 40));
+
+
+// DOM Manipulation  (Document object model)
+let myNameBea="Shafia"
+const targetElement = document.getElementById("myName")
+// console.log(targetElement, 'Target Object');
+
+targetElement.innerHTML = myNameBea;
+
+const newEle= document.createElement("p")
+newEle.appendChild(newEle)
