@@ -285,7 +285,6 @@ function totalMarks(name, obtMarks, grade = "A") {
 }
 
 totalMarks("Meer", 70)
-
 totalMarks("Maham", 90, "B")
 totalMarks("Latif", 50)
 
@@ -309,13 +308,20 @@ let additionValues = (val1, val2) => {
 }
 console.log(additionValues(20, 40));
 
-
 // DOM Manipulation  (Document object model)
-let myNameBea="Shafia"
+let myNameBea = "Ameer Hamza"
 const targetElement = document.getElementById("myName")
 // console.log(targetElement, 'Target Object');
 
 targetElement.innerHTML = myNameBea;
 
-const newEle= document.createElement("p")
-newEle.appendChild(newEle)
+// Events in JS
+const clickyId = document.getElementById("clickingId")
+console.log(clickyId);
+function handleClickEvent() {
+
+}
+clickyId.addEventListener("click", () => {
+    alert("Hey, I'm clicked")
+    console.log('Ye click hogya hai');
+})
