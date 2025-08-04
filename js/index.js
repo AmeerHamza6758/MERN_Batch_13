@@ -325,3 +325,48 @@ clickyId.addEventListener("click", () => {
     alert("Hey, I'm clicked")
     console.log('Ye click hogya hai');
 })
+
+
+// String Methods
+let strVar = 'DevCastle'
+const myStrName = "Ameer Hamza"
+strVar[2]
+const resultStr = strVar.includes("z")
+const replacedStr = strVar.replaceAll("e", "xzy")
+console.log(replacedStr);
+
+const startStr = strVar.endsWith("l")
+console.log(startStr, 'Start With');
+
+
+const splitStr = strVar.split(" ")
+console.log(splitStr, 'Split');
+
+const slicesStr = strVar.slice(-2)
+const subStringsStr = strVar.substring(-2)
+
+console.log(slicesStr, 'Slice');
+console.log(subStringsStr, 'SubString');
+
+// const concatedStr = strVar.concat(" ",myStrName)
+const concatedStr = strVar + " " + myStrName
+console.log(concatedStr);
+
+const charAtStr = strVar.charAt(4)
+console.log(charAtStr, 'CharAt');
+
+// subString
+// slice
+// LoweCase
+// UpperCase
+// Includes
+//Replcace
+// Length
+// ReplaceAll
+// startWith
+// endsWith
+// Split
+// Slice
+// subString
+//concat
+// CharAt
