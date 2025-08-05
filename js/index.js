@@ -329,7 +329,8 @@ clickyId.addEventListener("click", () => {
 
 // String Methods
 let strVar = 'DevCastle'
-const myStrName = "Ameer Hamza"
+const myStrName = "Ameer Hamza";
+const studentName = String("Arslan")
 strVar[2]
 const resultStr = strVar.includes("z")
 const replacedStr = strVar.replaceAll("e", "xzy")
@@ -360,13 +361,54 @@ console.log(charAtStr, 'CharAt');
 // LoweCase
 // UpperCase
 // Includes
-//Replcace
+// replcace
 // Length
 // ReplaceAll
 // startWith
 // endsWith
-// Split
-// Slice
-// subString
-//concat
+// concat
 // CharAt
+
+
+
+// Number Methods /Math methods
+const basketPrice = 140;
+const basketPricee2 = "20.90456"
+const basketPricee1 = Number(200)
+const output = basketPrice - "100"
+console.log(typeof Number(basketPrice), output, 'Number');
+const isCheck = isNaN(basketPrice)
+console.log(isCheck);
+
+// cl
+const sum = +10 + basketPricee2
+console.log(sum);
+
+// parseInt 
+// Parse float
+
+const num = "20.007080884884939388758939200292944888393939885"
+console.log(Number(num));
+
+// Math methods
+// Max
+// Min
+// fixed
+// round
+// ceil
+// floor
+// random
+// sqrt
+// trunc
+
+const priceOne = -10
+const priceTwo = 10
+const priceThree = 340.933
+const pricesArray = ["100.09765"]
+console.log(Math.min(Number(pricesArray)));
+
+console.log(priceThree.toFixed(3));
+// console.log(Math.sqrt(10));
+console.log(Math.PI + 2);
+
+console.log(Math.floor(Math.random() * 10)+1000);
