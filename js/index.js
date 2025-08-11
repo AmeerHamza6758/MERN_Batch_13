@@ -411,4 +411,173 @@ console.log(priceThree.toFixed(3));
 // console.log(Math.sqrt(10));
 console.log(Math.PI + 2);
 
-console.log(Math.floor(Math.random() * 10)+1000);
+console.log(Math.floor(Math.random() * 10) + 1000);
+
+
+// Object Methods
+
+const student = {
+    name: "Payal",
+    email: "payal@yahoo.co",
+    mobile: +9138392902,
+    age: 25,
+    address: 'Jinnah Park RYK',
+}
+
+console.log(student, 'Complete Object');
+
+Object.freeze(student)
+
+
+// Delete
+delete student.name
+delete student.email
+
+// Freeze
+
+// Add name
+student.firstName = "Ameer Hamza"
+// Brackets
+student["email"] = "ameer@yahoo.co"
+student.age = 35
+console.log(student, 'Modified Object');
+
+
+
+// assgin
+// freeze
+// seal
+// keys
+// values
+// entities
+
+const Arslan = {
+    fname: "Arslan",
+    lname: 'Akmal',
+    email: 'arslan@yahoo.com',
+    age: 30
+}
+
+const mentorHamza = {
+    fname: "Ameer",
+    LastName: 'Hamza',
+}
+
+const checkKeys = Object.keys(Arslan)
+console.log(checkKeys, 'Check Keys');
+
+const checkValues = Object.values(Arslan)
+console.log(checkValues, 'Check values');
+
+const checkPairs = Object.entries(Arslan)
+console.log(checkPairs, 'Check pairs');
+
+const mergedObject = Object.assign(Arslan, mentorHamza)
+console.log(mergedObject, 'Merged');
+
+// console.log(student.hasOwnProperty('name'));
+
+
+// Array Methods
+// POP
+// Push
+// Shift
+// Unshift
+// sort
+// reverse
+// includes 
+// length
+// join
+// toString
+// forEach
+// concat
+// flat
+// splice
+// slice
+//
+const salary = [400, 2000, 200, 800, 3400]
+
+// Add new items
+// salary.sort((a, b) => b - a)
+
+// const xyz = salary.reverse()
+// const xyz = salary.includes(20000)
+
+// const xyz= salary.join('*')
+// const xyz =salary.toString()
+
+
+// const xyz = salary.forEach((item) => { console.log(item, 'Ye item ha'); });
+
+const devStudBoys = ['Saif', 'waleed', 'Izhhar', "Sarmad", 'Hammad', 'Mushaib']
+const devStudGirls = ["Ayesha", "Amina", "Tyabba", "Sadaf", "Farah"]
+
+// const xyz = devStudBoys.concat(devStudGirls)
+const xyz = devStudGirls.flat()
+console.log(xyz, 'New Array');
+
+const slicedArray = devStudGirls.slice(1, 4)
+console.log(slicedArray, 'Sliced Array');
+
+// const spliceArray = devStudGirls.splice(1, 1, 'Tyabba', 'Shafia')
+console.log(devStudGirls, 'spliced Array ');
+
+
+//map
+//filter
+//reduce
+//find
+//findIndex
+//fill
+//every
+//some
+
+
+let studentsArray = ["Ali", "Arslan", "Ali", "Fahad", 'Hamza']
+
+// studentsArray.fill("Hamza", 1, 3)
+console.log(studentsArray, 'Student Array');
+
+const newStudArray = studentsArray.find((item) => item === "Arslan")
+
+// const findex = studentsArray.findIndex("Ali")
+console.log(newStudArray, 'Find Method');
+
+const newMappedArray = studentsArray.map((item, index) => { console.log(`${index} :: Hello ${item}`); })
+
+const userInput = 'Ali'
+const filteredArray = studentsArray.filter((item, index) => item === userInput)
+
+console.log(filteredArray, 'Filtered Array');
+
+const evenNumsArray = [20, 20, 5, 20, 20]
+
+
+const reducedAray = evenNumsArray.reduce((accumu, currentItem) => accumu + currentItem)
+console.log(reducedAray, 'Reduce Method');
+
+const evenFilteredArray = evenNumsArray.filter((item, index) => {
+    return (
+        item % 2 == 0
+    )
+})
+
+console.log(evenFilteredArray, 'Filtered Array');
+
+
+const isValidAll = evenNumsArray.some((item) => item > 10)
+console.log(isValidAll, 'Check');
+
+
+const darray = [10, 30, 20]
+
+const [a, b, c] = darray
+
+const ab = darray[2]
+console.log(a, b, c, ab, 'Array');
+
+const obj = { title: 'xyz', body: 'xyz' }
+
+const { title } = obj
+
+console.log(title, 'abc', obj);
