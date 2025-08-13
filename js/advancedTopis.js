@@ -129,27 +129,28 @@ function proFunc(stud) {
 }
 
 
-const proVar = proFunc().then((res) => { console.log(res, 'Promise resolved'); })
-    .catch((err) => { console.log(err, 'Promise rejected'); }).finally(() => console.log('Finall chal gya'))
+// const proVar = proFunc().then((res) => { console.log(res, 'Promise resolved'); })
+//     .catch((err) => { console.log(err, 'Promise rejected'); }).finally(() => console.log('Finall chal gya'))
 
-console.log(proVar);
+// console.log(proVar);
 
 
 
-function steps1() {
+function steps1(stud) {
     console.log('step-1');
-    return Promise.resolve()
+    return Promise.resolve(stud)
 }
 
-function steps2() {
+function steps2(name) {
     console.log('step-2');
-    return Promise.resolve()
-
+    if (name) {
+        return Promise.resolve(true)
+    }
 }
 
-function steps3() {
-    console.log('step-3');
-    return Promise.resolve()
+function steps3(stauts) {
+    console.log('step-3-Notification sent');
+    return Promise.resolve(true)
 
 }
 
@@ -159,11 +160,90 @@ function steps4() {
 }
 
 
-steps1().then(() => {
-    steps2().then(() => {
-        steps3().then(() => {
-            steps4().then(() => { console.log('All steps called'); })
-        })
-    })
-})
+// steps1().then(() => {
+//     steps2().then(() => {
+//         steps3().then(() => {
+//             steps4().then(() => { console.log('All steps called'); })
+//         })
+//     })
+// })
 
+
+
+// async/await
+
+async function asFunc() {
+    try {
+        console.log('Async function call');
+        const myName = "Ameer Hamza"
+        const name = await steps1(myName)
+        const stauts = await steps2(name)
+        const notiSend = await steps3(stauts)
+        await steps4()
+
+    } catch (error) {
+        console.log(error, 'Error');
+    }
+}
+
+function syncFunc() {
+    console.log('Sync function called');
+    return 'Ameer Hamza'
+}
+
+// const resolvedFunc = asFunc()
+// const resolvedSyncFunc = syncFunc()
+
+// console.log(resolvedFunc, 'async');
+// console.log(resolvedSyncFunc, 'sync');
+
+
+
+
+
+async function fetchUserData(userId) {
+    console.log(`Fetching data for user: ${userId}`);
+    return new Promise(resolve => setTimeout(() => resolve({ id: userId, name: "John Doe" }), 1000));
+}
+
+async function processUserData(user) {
+    console.log(`Processing data for user: ${user.name}`);
+    return new Promise(resolve => setTimeout(() => resolve({ ...user, processed: true }), 800));
+}
+
+async function saveUserData(processedUser) {
+    console.log(`Saving data for user: ${processedUser.name}`);
+    return new Promise(resolve => setTimeout(() => resolve({ ...processedUser, saved: true }), 500));
+}
+
+async function handleUserWorkflow(userId) {
+    try {
+        const user = await fetchUserData(userId);
+        const processedUser = await processUserData(user);
+        const savedUser = await saveUserData(processedUser);
+        console.log("User workflow completed:", savedUser);
+    } catch (error) {
+        console.error("Error in user workflow:", error);
+    }
+}
+
+// handleUserWorkflow(123);
+
+
+
+
+async function getUserPosts() {
+    const response = await fetch('https://jsonplaceholder.typicode.com/posts')
+    const data = await response.json()
+    console.log(data);
+
+    const postId = document.getElementById("post")
+    data.map((item, index) => {
+        let pId = document.createElement("h1")
+        console.log(item.title, 'title');
+        pId.textContent = `${item.title}`
+        postId.appendChild(pId)
+    })
+}
+
+getUserPosts()
